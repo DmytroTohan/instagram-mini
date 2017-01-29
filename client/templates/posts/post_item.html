@@ -1,15 +1,39 @@
 <template name="postItem">
   <div class="post">
-    <a href="#" class="upvote btn btn-default {{upvotedClass}}">⬆</a>
-    <div class="post-content">
-      <h3><a href="{{url}}">{{title}}</a><span>{{domain}}</span></h3>
-      <p>
-        {{pluralize votes "Vote"}},
-        submitted by {{author}},
-        <a href="{{pathFor 'postPage'}}">{{pluralize commentsCount "comment"}}</a>
-        {{#if ownPost}}<a href="{{pathFor 'postEdit'}}">Edit</a>{{/if}}
-      </p>
+    <div class="post-author">
+        Posted by {{author}}
     </div>
-    <a href="{{pathFor 'postPage'}}" class="discuss btn btn-default">Discuss</a>
+    <!-- <div class="post-container">
+      <div class="post-container-controlls">
+        <div class="vote-controlls">
+          <a href="#" class="upvote btn btn-default {{upvotedClass}}">&#9825;</a>
+          <span class="votes">{{votes}}</span>
+        </div>
+        <div class="comments-controlls">
+            <a href="{{pathFor 'postPage'}}">{{pluralize commentsCount "comment"}}</a>
+        </div>
+      </div>
+    </div> -->
+
+
+    <!-- <a href="#" class="upvote btn btn-default {{upvotedClass}}"> -->
+      <!-- <img src="../images/likes.png" alt="likes"> -->
+    <!-- </a> -->
+    <div class="post-content">
+      <p><img src="../images/lexus.jpg" alt=""></p>
+      <!-- <h3><a href="{{url}}">{{title}}</a><span>{{domain}}</span></h3> -->
+      <div class="post-controlls">
+        <p>
+          <a href="#" class="upvote btn btn-default {{upvotedClass}}">&#9825;&emsp;{{pluralize votes ""}}</a>
+      </p>
+        <!-- submitted by {{author}}, -->
+      <p>
+        <a href="{{pathFor 'postPage'}}"><img class="comments-img" src="../images/comment.png">{{pluralize commentsCount ""}}</a>
+        <!-- {{#if ownPost}}<a href="{{pathFor 'postEdit'}}">Edit</a>{{/if}} -->
+      </p>
+      </div>
+
+    </div>
+    <!-- <a href="{{pathFor 'postPage'}}" class="discuss btn btn-default">Discuss</a> -->
   </div>
 </template>
